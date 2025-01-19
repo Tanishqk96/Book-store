@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { useProductStore } from '../store/product';
-
+import { useNavigate } from 'react-router-dom';
 const Createpage = () => {
   const [newproduct, setnewproduct] = useState({
     name: '',
     price: '',
     image: '',
   });
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/"); // Navigate to the "About" page
+  };
 
   const { createProduct } = useProductStore();
 
@@ -97,6 +103,7 @@ const Createpage = () => {
         </div>
 
         <button
+          onClick={handleButtonClick}
           type="submit"
           className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800"
         >
