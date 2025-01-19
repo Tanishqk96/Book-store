@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <Link to={"/"} className="flex items-center gap-3 hover:text-yellow-400 transition-all duration-300">
             <img src={logo} alt="Book Byte Logo" className="w-14 h-14 object-cover rounded-full border-2 border-yellow-500" />
-            <h3 className="text-2xl font-semibold tracking-wide">Book Byte</h3>
+            <h3 className="text-2xl font-semibold tracking-wide">Product Byte</h3>
           </Link>
           <MdOutlineLocalGroceryStore className="mt-1 text-yellow-500 text-4xl" />
         </div>
